@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="122" viewBox="0 0 122 122">
+  <g id="グループ_2" data-name="グループ 2" transform="translate(-35 -28)">
+    <circle id="楕円形_1" data-name="楕円形 1" cx="61" cy="61" r="61" transform="translate(35 28)" fill="#e9e4d3"/>
+    <circle id="楕円形_2" data-name="楕円形 2" cx="45" cy="45" r="45" transform="translate(51 44)" fill="#80070a"/>
+    <path id="パス_5" data-name="パス 5" d="M45,0V45L15.126,11.346A44.673,44.673,0,0,1,45,0Z" transform="translate(51 44)" fill="#440507"/>
+    <text id="_90_" data-name="90%" transform="translate(77 116)" fill="#ba8847" font-size="32" font-family="LiGothicMed, Apple LiGothic" letter-spacing="0.115em"><tspan x="0" y="0">9</tspan><tspan y="0">0</tspan><tspan y="0" font-size="16">%</tspan></text>
+  </g>
+</svg>
