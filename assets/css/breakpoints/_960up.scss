@@ -1,0 +1,31 @@
+.font-sm {
+  font-size: 16px!important;
+}
+.font-md {
+  font-size: 19px!important;
+}
+.font-lr {
+  font-size: 23px!important;
+}
+.font-lg {
+  font-size: 36px!important;
+}
+.mb-10 {
+  margin-bottom: 10vw !important;
+}
+.mb-sm {
+  margin-bottom: 10px;
+}
+.mb-md {
+  margin-bottom: 50px!important;
+}
+.mb-lg {
+  padding-bottom: 150px!important;
+}
+
+.content-width {
+  width: 80%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+

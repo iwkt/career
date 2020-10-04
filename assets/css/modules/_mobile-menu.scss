@@ -1,0 +1,162 @@
+* {
+  font-family: 游ゴシック,游ゴシック体,Yu Gothic,YuGothic,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic ProN,メイリオ,Meiryo,sans-serif;
+}
+
+.bdr_btm_no {
+  border-bottom: none !important;
+}
+.pt_16 {
+  padding: 16px 0 0!important;
+}
+
+.acd__parent__ttl {
+  // padding: 20px;
+  position: relative;
+}
+.acd__child {
+  &__size8.inview {
+    height: $acd_chi_height * 8; 
+  }
+  &__size7.inview {
+    height: $acd_chi_height * 7; 
+  }
+  &__size6.inview {
+    height: $acd_chi_height * 6; 
+  }
+  &__size5.inview {
+    height: $acd_chi_height * 5; 
+  }
+  &__size4.inview {
+    height: $acd_chi_height * 4; 
+  }
+  &__size3.inview {
+    height: $acd_chi_height * 3; 
+  }
+}
+.fa-angle-down {
+  font-size: 18px !important;
+}
+
+.mbl {
+  &__container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    
+  }
+  &__menu {
+    overflow-y: scroll;
+    background: #fff;
+    color: #333;
+    margin: auto;
+    z-index: 99;
+    height: 0;
+    transition: all 0.5s ease-out;
+    &.active {
+      transform: none;
+      height: calc(100vh - 60px);
+    }
+    & a {
+      display: block;
+      padding: 16px 6.25% 14px;
+      font-weight: 700;
+    }
+    &__chd__ul {
+      background-color: $c_bg;
+      color: $c_ltred;
+      display: block;
+      @include acd_base();
+      &.inview {
+        @include acd_inview();
+        // margin: 0 20px 0;
+      }
+      & a {
+        font-weight: normal;
+        padding: 16px 0 14px;
+      }
+
+      & li {
+        // height: 40px;
+        border-bottom: 1px solid #a04448;
+        margin: 0 6.25%;
+      }
+    }
+
+    &__li {
+      border-bottom: 1px solid #bebebe;
+      }
+    &__toggle_btn {
+      position: absolute;
+      top: 20%;
+      right: 20px;
+    }
+  }
+  &__li__ttl {
+    &.inview {
+      color: $c_bg;
+    }
+  }
+  &__ul a {
+    font-size: 13px!important;
+    color: #666666;
+  }
+}
+.toglle_block {
+  position: absolute;
+  display: block;
+  right: 10px;
+  top: -3px;
+  transition: all 0.3s ease;
+  &.inview {
+    transform: rotate(180deg);
+  }
+}
+
+//ハンバーガーmenu============= 
+.mbl__nav {
+  height: 60px;
+}
+.mbl__nav a { //外枠の丸
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  right: 0;
+  // background-color: #1565c0;
+  z-index: 2;
+}
+.nav_open {
+  & div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease-out;
+
+    &:nth-of-type(1) {
+      transform: translate(-50%,-10px);
+    }
+    &:nth-of-type(3) {
+      transform: translate(-50%,7px);
+    }
+  }
+}
+.nav_open.active div {
+  &:nth-last-child(1) {
+    transform: rotate(45deg) translate(-50%,0px);
+    transform-origin: left;
+  }
+  &:nth-last-child(2) {
+    opacity: 0;
+  }
+  &:nth-last-child(3) {
+    transform: rotate(-45deg) translate(-50%,0px);
+    transform-origin: left;
+  } 
+}
+//ハンバーガーmenuここまで============= 
