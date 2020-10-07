@@ -331,7 +331,7 @@ a {
   padding: 12px 0;
 }
 
-.content-width, .search__container {
+.content-width, .interview, .search__container {
   width: 90%;
   margin: 0 auto;
   max-width: 1400px;
@@ -362,12 +362,75 @@ a {
   z-index: 10;
 }
 
+.interview {
+  font-family: serif;
+}
+
+.interview__inner {
+  position: relative;
+}
+
+.interview__outer {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 29px 0.88% 31px 23px !important;
+}
+
+.interview__main {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.interview__main::before {
+  content: "";
+  background-image: url(../images/mic.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.interview__sub {
+  color: #333;
+  font-family: メイリオ,Meiryo,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,sans-serif;
+}
+
 .logo {
   margin-left: 10px;
 }
 
+.main_ttl {
+  font-size: 18px;
+  color: #7D1820;
+}
+
 .pc__nav {
   display: none;
+}
+
+.reason__inner {
+  text-align: center;
+}
+
+.reason__No {
+  font-size: 60px;
+  text-align: center;
+}
+
+.reason__main__ttl {
+  font-size: 20px;
+}
+
+.reason__sub__ttl, .reason__No {
+  color: #7D1820;
+  font-family: Times New Roman,EB Garamond,serif;
 }
 
 .section_ttl {
@@ -489,7 +552,7 @@ a {
   .mb-lg {
     padding-bottom: 150px !important;
   }
-  .content-width, .search__container {
+  .content-width, .interview, .search__container {
     width: 80%;
     margin: 0 auto;
     max-width: 1400px;
