@@ -31,3 +31,23 @@ class MobileMenu {
     this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
   }
 }
+
+// class ABC extends MobileMenu {
+//   constructor () {
+
+//     this.btn = document.querySelector("#History__acd__btn");
+//     this.container = document.querySelector("#History__acd");
+//   }
+
+//   _getEventType(){
+//     super._getEventType();
+//   }
+
+//   _toggle(){
+//     super._toggle();
+//   }
+
+//   _addEvent() {
+//     super._addEvent();
+//   }
+// }

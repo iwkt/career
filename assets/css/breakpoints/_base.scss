@@ -40,6 +40,9 @@ a {
 .pb-sm {
   padding-bottom: 16px!important;
 }
+.pb-md {
+  padding-bottom: 50px!important;
+}
 .pd-lg {
   padding-bottom: 80px!important;
 }
@@ -71,12 +74,43 @@ a {
   width: 200px;
   padding: 12px 0;
 }
+.btn-red {
+    display: block;
+    text-align: center;
+    background: #7D1820;
+    color: #fff!important;
+    padding: 17px 0 14px;
+    border-radius: 4px;
+    box-shadow: 0 3px 4px rgba(51,51,51,.25);
+}
 .content-width {
   width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
 }
+.main {
+  &_ttl {
+    font-size: 18px;
+    color: $c_bg;
+  }
+}
 
+.part-main-ttl {
+  color: #333;
+  font-family: 游ゴシック,游ゴシック体,Yu Gothic,YuGothic,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic ProN,メイリオ,Meiryo,sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.part-sub-ttl {
+  color: $c_bg;
+  font-family: Times New Roman,EB Garamond,serif; 
+}
+
+.ttl-bk16 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
 
 
 // ---------------------------------------------
@@ -102,6 +136,75 @@ a {
   border-bottom: 1px solid  #dedede;
   box-shadow: 1px 1px 2px rgba(0,0,0,.1);
   z-index: 10;
+}
+
+.history {
+  &__header {
+  position: relative;
+  padding-left: 30px;
+    &::before {
+      content: "";
+      background-image: url(../images/time.svg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 22px;
+      width: 23px;
+      display: inline-block;
+      position: absolute;
+      top: -4px;
+      left: 0;
+    }
+  }
+  &__link {
+    display: block;
+    font-size: 16px;
+    font-family: $font_m;
+    line-height: 2.3;
+    width: 92%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #275481!important;
+  }
+  &__more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #275481;
+    font-family: $font_m;
+    font-size: 14px;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url(../images/plus.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      position: absolute;
+      top: 1px;
+      margin-left: 10px;
+      // left: 0;   
+    }
+  }
+  &__outer {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0.88% 15px 23px!important;
+  }
+  &__li:first-child {
+    margin-top: 10px;
+  }
+  &__ul {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      height: 150px;
+    }
+  }
 }
 
 .interview {
@@ -143,24 +246,58 @@ a {
 
 .logo {
   margin-left: 10px;
-}
-.main {
-  &_ttl {
-    font-size: 18px;
-    color: $c_bg;
+  &_bain {
+    border: 1px solid #ccc;
   }
 }
+
 .pc__nav {
   display: none;
 }
 .reason {
-  &__inner {
+  &__articles {
+  }
+  &__article {
+    @extend .seminer__article;
+  }
+  &__container {
+  }
+  &__header {
     text-align: center;
+  }
+  &__inner {
+    
+  }
+  &__li {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 99%;
+      background: #f2eee7;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__articles li:first-child::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 112%;
+    background: #f2eee7;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
   }
   &__No {
     @extend .reason__sub__ttl;
     font-size: 60px;
     text-align: center;
+    padding-top: 10px;
   }
   &__main__ttl {
     font-size: 20px;
@@ -168,6 +305,10 @@ a {
   &__sub__ttl {
     color: $c_bg;
     font-family: Times New Roman,EB Garamond,serif;
+  }
+  &__ttl {
+    @extend .ttl-bk16;
+    line-height: 1.5;
   }
 }
 .section_ttl {
@@ -237,6 +378,68 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+  }
+}
+
+.seminer {
+  &__article {
+    color: #333;
+    font-family: $font_m;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+  }
+  &__container {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      background: #f2eee7;
+      width: 100%;
+      height: 98%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__date {
+    padding-left: 10px;
+  }
+  &__image {
+    padding: 0 3px;
+  }
+  &__li {
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 4px rgba(51,51,51,.25);
+    background-color: #fff;
+  }
+  &__link {
+    display: block;
+    padding: 35px 20px;
+  }
+  &__price {
+    font-weight: 700;
+    color: $c_bg;
+    @extend .font-sm;
+    & span {
+      border: 1px solid $c_bg;
+      padding: 4px 10px;
+      display: inline-block;
+    }
+  }
+  &__more__look {
+    margin: 0 auto;
+    margin-top: -25px;
+  }
+  &__ttls {
+   text-align: center;
+  }
+  &__ttl {
+    font-size: 18px;
+    color: $c_bg;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
   }
 }
 .strong {
