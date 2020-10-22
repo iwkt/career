@@ -41,7 +41,7 @@ a {
   padding-bottom: 16px!important;
 }
 .pb-md {
-  padding-bottom: 50px!important;
+  padding-bottom: 30px!important;
 }
 .pd-lg {
   padding-bottom: 80px!important;
@@ -74,6 +74,7 @@ a {
   width: 200px;
   padding: 12px 0;
 }
+
 .btn-red {
     display: block;
     text-align: center;
@@ -82,6 +83,11 @@ a {
     padding: 17px 0 14px;
     border-radius: 4px;
     box-shadow: 0 3px 4px rgba(51,51,51,.25);
+}
+.btn-ttl {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
 }
 .content-width {
   width: 90%;
@@ -95,15 +101,21 @@ a {
   }
 }
 
+.link-color {
+  color: $c_link;
+}
+
 .part-main-ttl {
-  color: #333;
+
   font-family: 游ゴシック,游ゴシック体,Yu Gothic,YuGothic,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic ProN,メイリオ,Meiryo,sans-serif;
   font-size: 22px;
   letter-spacing: 2px;
+  text-align: center;
 }
 .part-sub-ttl {
   color: $c_bg;
   font-family: Times New Roman,EB Garamond,serif; 
+  text-align: center;
 }
 
 .ttl-bk16 {
@@ -114,12 +126,248 @@ a {
 
 
 // ---------------------------------------------
+.blog {
+  &__link {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1)
+  }
+  &__predi {
+    font-size: 18px;
+    color: $c_bg;
+    &-comment {
+      margin-bottom: 8px;
+    }
+  }
+  &__text {
+    padding: 20px!important;
+  }
+}
 .btn_link {
   border: 2px solid #fff;
   border-radius: 4px;
   padding: 10px 20px;
   display: block;
   font-weight: 700;
+}
+
+.case {
+  &__article {
+    color: #333;
+    font-family: $font_m;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+  }
+  &__container {
+    position: relative;
+    margin-bottom: 40px;
+    &::before {
+      content: "";
+      display: block;
+      background: $c_beige;
+      width: 100%;
+      height: 97.5%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__date {
+    padding-left: 10px;
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 15px !important;
+    & > h2 {
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  &__image {
+    padding: 0 3px;
+  }
+  &__li:not(:last-child) {
+    border-bottom: 2px solid #fff;
+  }
+  &__link {
+    display: block;
+    padding: 25px 0 50px;
+  }
+  &__price {
+    font-weight: 700;
+    color: $c_bg;
+    @extend .font-sm;
+    & span {
+      border: 1px solid $c_bg;
+      padding: 4px 10px;
+      display: inline-block;
+    }
+  }
+  &__more__look {
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  &__ribonn {
+    &-black {
+      background-color: #363636;
+      color: #fff;
+      margin-top: 10px;
+      & > ul {
+        transform: translate(-45%, -50%);
+        width: 88%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -.5px;
+        border-style: solid;
+        border-width: 75px 0 75px 20px;
+        border-color: transparent transparent transparent $c_beige;
+      }
+    }
+    &__outer {
+      position: relative;
+      height: 145px;
+      line-height: 1.4;
+    }
+    &-position {
+      font-weight: bolder;
+    }
+    &-price {
+      font-size: 1.5rem;
+      font-family: Lato;
+      font-weight: 700;
+    }
+    &-ul {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+
+    }
+    &-white {
+      background-color: #fff;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: -.5px;
+        border-style: solid;
+        border-width: 75px 0 75px 20px;
+        border-color: transparent transparent transparent #fff;
+        background: $c_beige;
+      }
+      & > ul {
+        transform: translate(-53%, -50%);
+        color: $c_bg;
+      }
+    }
+  }
+  &__ttls {
+   text-align: center;
+  }
+  &__ttl {
+    font-size: 18px;
+    color: $c_bg;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+  }
+}
+
+.cta {
+  color: #fff;
+  &__bgi {
+  	background-image: url(../images/img_cta_bg.png);
+    background-size: cover;
+    background-position: 64% center;
+    background-repeat: no-repeat;
+  }
+  &__btn {
+    text-align: center;
+  }
+  &__consal-ttl {
+    padding: 50px 0 30px;
+  }
+  &__description {
+    font-family: $font-m;
+    line-height: 1.4;
+    text-align: center;
+  }
+  &__facebook {
+    text-align: right!important;
+    margin-right: 10px!important;
+  }
+  &__linked {
+    text-align: left!important;
+    margin-left: 10px!important;
+  }
+  &__features {
+    color: #333!important;
+  }
+  &__feature {
+    line-height: 1.5;
+    padding-bottom: 25px!important;
+    &-img {
+    padding-right: 10px;
+    }
+    &-text {
+      > P {
+        font-family: $font-m;
+        font-size: 10px;
+      }
+    }
+    &-ttl {
+      font-size: 14px;
+      letter-spacing: 0.8px;
+    }
+  }
+  &__header {
+    text-align: center;
+    
+  }
+  &__mail-btn {
+    @extend .part-main-ttl;
+    display: block;
+    border: 2px solid #f2de9e;
+    border-radius: 4px;
+    color: #f2ee9e;
+    font-size: 16px!important;
+    font-weight: 700;
+    padding: 15px 0;
+  }
+  &__main-ttl {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.3;
+    padding-bottom: 30px;
+  }
+  &__sns {
+    background-color: #400305;
+    text-align: center;
+    font-family: $font-m!important;
+    &-i {
+      font-weight: 700;
+      font-size: 15px;
+    }
+    &-icon {
+      max-width: 16%;
+      vertical-align: bottom;
+    }
+    &__ttl {
+      font-size: 18px;
+      padding: 30px 0 20px;
+    }
+  }
+  &__ul {
+    background-color: #fff;
+    padding: 20px;
+  }
 }
 
 .fa-angle-right {
@@ -207,6 +455,115 @@ a {
   }
 }
 
+$pattern: (
+  "cat-other": その他,
+  "cat-seminer": セミナー情報
+);
+
+@each $key, $value in $pattern {
+  
+  .informaiton__#{$key} {
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    &::after {
+      content: "#{$value}";
+      position: absolute;
+      top: -2px;
+      right: -150px;
+      height: 19px;
+      width: 120px;
+      background-color: #707070;
+      color: #fff;
+      text-align: center;
+      font-weight: normal;
+      font-size: 12px;
+      padding: 3px 0;
+    }
+  }
+}
+
+.information {
+  &__btn {
+    margin-top: 40px;
+  }
+  &__date__part {
+    @extend .mb-sm;
+  }
+  
+  &__li {
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0;
+  }
+  &__link {
+    color: $c_link;
+    @extend .reason__article;
+  }
+}
+.industry {
+  &__box-outer {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  }
+  text-align: center;
+  &__header {
+    position: relative;
+    padding-bottom: 160px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 36px;
+      left: 0;
+      background-image: url(../images/img_top_industry_visual.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width:100%;
+      height: $industry_header_height;
+      z-index: -1;
+      margin-bottom: 100px;
+    }
+  }
+  &__image {
+    // object-fit: cover;
+    // width: 100%;
+    // height: 129px;
+    // &-outer {
+    //   width: 100%;
+    //   height: 50%;
+    // }
+  }
+  &__li {
+    padding: 29px 0.88% 29px 23px!important;
+    font-weight: bold;
+    &:nth-of-type(2) {
+      border-top: 1px solid #ccc;;
+      border-bottom: 1px solid #ccc;;
+    }
+  }
+  &__link {
+    display: block;
+  }
+  &__main__ttl {
+    @extend .reason__main__ttl;
+  }
+  &__outer {
+    text-align: left;
+  }
+  &__sub__ttl {
+    @extend .reason__sub__ttl;
+  }
+  &__top__p {
+    @extend .font-lr;
+    @extend .reason__article;
+    font-weight: normal;
+    text-align: left;
+    letter-spacing: 1px !important;
+    line-height: 1.2;
+
+  }
+}
 .interview {
   @extend .content-width;
   font-family: serif;
@@ -276,7 +633,7 @@ a {
       display: block;
       width: 100%;
       height: 99%;
-      background: #f2eee7;
+      background: $c_beige;
       bottom: 0;
       left: 0;
       z-index: -1;
@@ -288,7 +645,7 @@ a {
     display: block;
     width: 100%;
     height: 112%;
-    background: #f2eee7;
+    background: $c_beige;
     bottom: 0;
     left: 0;
     z-index: -1;
@@ -394,7 +751,7 @@ a {
     &::before {
       content: "";
       display: block;
-      background: #f2eee7;
+      background: $c_beige;
       width: 100%;
       height: 98%;
       position: absolute;
