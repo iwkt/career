@@ -1,4 +1,5 @@
 // aタグ要素の参照を取得
+/*
 const links = document.querySelectorAll('a[href^="#"]');
 
 // 各aタグにクリックイベントを設定
@@ -20,3 +21,15 @@ for ( let i = 0; i < links.length; i++ ) {
     });
   });
 }
+*/
+    document.addEventListener("click", e => {
+      const target = e.target;
+      // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
+      if (!target.classList.contains("js-smooth-scroll")) return;
+      e.preventDefault();
+      const targetId = target.hash;
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
