@@ -374,6 +374,43 @@ a {
   margin-left: 10px;
 }
 
+.footer {
+  background-color: #f2eee7;
+  &__copy {
+    background-color: #e3dfd7;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 14px 3.125%;
+    text-align: center;
+  }
+  &__dd {
+    line-height: 20px;
+    font-family: $font-m;
+    font-size: 0.8rem;
+  }
+  &__dt {
+    padding-bottom: 20px;
+    font-family: $font-m;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  &__li {
+    padding-bottom: 20px;
+    & > a {
+      font-family: $font-m;
+      font-size: 0.8rem;
+    }
+  }
+  &__logo {
+    padding-top: 20px;
+    max-width: 90%;
+  }
+  &__ul {
+    border-top: 1px solid #dedede;
+    padding: 20px 0 5px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -525,15 +562,6 @@ $pattern: (
       margin-bottom: 100px;
     }
   }
-  &__image {
-    // object-fit: cover;
-    // width: 100%;
-    // height: 129px;
-    // &-outer {
-    //   width: 100%;
-    //   height: 50%;
-    // }
-  }
   &__li {
     padding: 29px 0.88% 29px 23px!important;
     font-weight: bold;
@@ -612,18 +640,11 @@ $pattern: (
   display: none;
 }
 .reason {
-  &__articles {
-  }
   &__article {
     @extend .seminer__article;
   }
-  &__container {
-  }
   &__header {
     text-align: center;
-  }
-  &__inner {
-    
   }
   &__li {
     position: relative;
@@ -799,15 +820,36 @@ $pattern: (
     line-height: 1.5;
   }
 }
+.smooth-scrl {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.8s ease;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    display: inline-block;
+    position: fixed;
+    bottom: 75px;
+    right: -2px;
+    transform: scale(0.68);
+    border-radius: 3.5px;
+    box-shadow: 0 3px 4px rgba(0,0,0,.25);
+    z-index: 300;
+    
+    & > svg {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
 .strong {
-  // position: absolute;
-  // top: 245px;
-  // left: 0;
-  // width: 100%;
-  // height: auto;
-  // &__container {
-    //   position: relative;
-    // }
   &__inner {
     margin-top: -25vw;
     background-image: url(../../../assets/images/img_top_h1bg.png);
@@ -826,8 +868,4 @@ $pattern: (
   &__hero {
     padding-top: 45px;
   }
-}
-
-#WhatNew {
-  // position: relative;
 }

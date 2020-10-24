@@ -53,6 +53,8 @@
     z-index: 99;
     height: 0;
     transition: all 0.5s ease-out;
+    position: fixed;
+    width: 100%;
     &.active {
       transform: none;
       height: calc(100vh - 60px);
