@@ -253,10 +253,6 @@ body {
   font-family: noto,'Noto Sans', "ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,"ＭＳ Ｐゴシック",MS PGothic,"Font Awesome 5 Free",sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -267,20 +263,24 @@ a {
           font-feature-settings: "palt" 1;
 }
 
-.font-sm, .case__price, .seminer__price {
+.font-sm, .case__price, .footer__dd, .footer__dt, .footer__li > a, .sentence, .seminer__price {
   font-size: 12px !important;
 }
 
-.font-md {
+.font-md, .btn-ttl, .case__article, .cta__feature-ttl {
   font-size: 14px !important;
 }
 
-.font-lr, .industry__top__p {
+.font-mlr, .ttl-bk16, .reason__ttl, .blog__predi, .case__header > h2, .case__ttl, .cta__mail-btn {
   font-size: 16px !important;
 }
 
-.font-lg {
-  font-size: 25px !important;
+.font-lr, .main_ttl, .cta__sns__ttl, .industry__top__p {
+  font-size: 18px !important;
+}
+
+.font-lg, .part-main-ttl, .cta__mail-btn, .case__ribonn-price, .section_ttl {
+  font-size: 22px !important;
 }
 
 .mb-10vw {
@@ -354,7 +354,6 @@ a {
 
 .btn-ttl {
   font-weight: bold;
-  font-size: 14px;
   text-align: center;
 }
 
@@ -365,7 +364,6 @@ a {
 }
 
 .main_ttl {
-  font-size: 18px;
   color: #7D1820;
 }
 
@@ -375,7 +373,6 @@ a {
 
 .part-main-ttl, .cta__mail-btn {
   font-family: 游ゴシック,游ゴシック体,Yu Gothic,YuGothic,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic ProN,メイリオ,Meiryo,sans-serif;
-  font-size: 22px;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -387,7 +384,6 @@ a {
 }
 
 .ttl-bk16, .reason__ttl {
-  font-size: 16px;
   color: #333;
   margin-bottom: 20px;
 }
@@ -401,7 +397,6 @@ a {
 }
 
 .blog__predi {
-  font-size: 18px;
   color: #7D1820;
 }
 
@@ -424,7 +419,6 @@ a {
 .case__article {
   color: #333;
   font-family: メイリオ, Meiryo, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN !important;
-  font-size: 14px;
   line-height: 1.7;
   letter-spacing: 1.2px;
 }
@@ -457,7 +451,6 @@ a {
 
 .case__header > h2 {
   width: 100%;
-  font-size: 16px;
   margin-bottom: 15px;
 }
 
@@ -523,7 +516,6 @@ a {
 }
 
 .case__ribonn-price {
-  font-size: 1.5rem;
   font-family: Lato;
   font-weight: 700;
 }
@@ -562,7 +554,6 @@ a {
 }
 
 .case__ttl {
-  font-size: 18px;
   color: #7D1820;
   letter-spacing: 1.5px;
   line-height: 1.5;
@@ -622,7 +613,6 @@ a {
 }
 
 .cta__feature-ttl {
-  font-size: 14px;
   letter-spacing: 0.8px;
 }
 
@@ -635,7 +625,6 @@ a {
   border: 2px solid #f2de9e;
   border-radius: 4px;
   color: #f2ee9e;
-  font-size: 16px !important;
   font-weight: 700;
   padding: 15px 0;
 }
@@ -664,7 +653,6 @@ a {
 }
 
 .cta__sns__ttl {
-  font-size: 18px;
   padding: 30px 0 20px;
 }
 
@@ -692,13 +680,11 @@ a {
 .footer__dd {
   line-height: 20px;
   font-family: メイリオ, Meiryo, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN !important;
-  font-size: 0.8rem;
 }
 
 .footer__dt {
   padding-bottom: 20px;
   font-family: メイリオ, Meiryo, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN !important;
-  font-size: 0.8rem;
   font-weight: 700;
 }
 
@@ -708,7 +694,6 @@ a {
 
 .footer__li > a {
   font-family: メイリオ, Meiryo, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN !important;
-  font-size: 0.8rem;
 }
 
 .footer__logo {
@@ -968,6 +953,10 @@ a {
   border: 1px solid #ccc;
 }
 
+.logo__img {
+  max-width: 200px;
+}
+
 .pc__nav {
   display: none;
 }
@@ -1004,6 +993,10 @@ a {
   z-index: -1;
 }
 
+.reason__imagefram {
+  display: none;
+}
+
 .reason__No {
   font-size: 60px;
   text-align: center;
@@ -1024,7 +1017,6 @@ a {
 }
 
 .section_ttl {
-  font-size: 22px;
   line-height: 1.4545;
   letter-spacing: 1.3px;
 }
@@ -1032,7 +1024,6 @@ a {
 .sentence {
   line-height: 1.77;
   font-weight: 700;
-  font-size: 13px;
   letter-spacing: 1.1px;
   text-align: justify;
   text-align-last: center;
@@ -1224,17 +1215,167 @@ a {
   padding-top: 45px;
 }
 
-@media (min-width: 960px) {
-  .font-sm, .case__price, .seminer__price {
+@media (min-width: 600px) {
+  .font-sm, .case__price, .footer__dd, .footer__dt, .footer__li > a, .sentence, .seminer__price {
     font-size: 16px !important;
   }
-  .font-md {
+  .font-md, .btn-ttl, .case__article, .cta__feature-ttl {
     font-size: 19px !important;
   }
-  .font-lr, .industry__top__p {
+  .font-mlr, .ttl-bk16, .reason__ttl, .blog__predi, .case__header > h2, .case__ttl, .cta__mail-btn {
+    font-size: 21px !important;
+  }
+  .font-lr, .main_ttl, .cta__sns__ttl, .industry__top__p {
     font-size: 23px !important;
   }
-  .font-lg {
+  .font-lg, .part-main-ttl, .cta__mail-btn, .case__ribonn-price, .section_ttl {
+    font-size: 32px !important;
+  }
+  .mb-10 {
+    margin-bottom: 10vw !important;
+  }
+  .mb-sm, .information__date__part {
+    margin-bottom: 10px;
+  }
+  .mb-md {
+    margin-bottom: 50px !important;
+  }
+  .mb-lg {
+    padding-bottom: 60px !important;
+  }
+  .content-width, .interview, .search__container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  .btn_link {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .blog__container {
+    max-width: 320PX;
+  }
+  .information__more__look.btn-red {
+    width: 60% !important;
+  }
+  .case__grid {
+    width: 90%;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  .cta__feature {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    text-align: center;
+  }
+  .cta__feature-img {
+    height: 144px;
+  }
+  .cta__feature-text > P {
+    font-size: 14px;
+  }
+  .cta__sns__ttl {
+    font-size: 16px !important;
+    padding: 30px 0 30px;
+    margin-bottom: 0 !important;
+  }
+  .footer__col {
+    padding-left: 25px;
+    margin-top: 25px;
+    border-left: 1px solid #ccc;
+  }
+  .footer__logo {
+    max-width: 160px;
+  }
+  .footer__ul {
+    border-top: none;
+  }
+  .history {
+    display: none;
+  }
+  .interview__main {
+    font-size: 20px !important;
+  }
+  .interview__outer:nth-of-type(1) {
+    margin-right: 20px !important;
+    margin-bottom: 0 !important;
+  }
+  .section__br-pc {
+    display: block;
+  }
+  .seminer__article, .reason__article, .information__link, .industry__top__p {
+    font-size: 1.1rem;
+  }
+  .seminer__container::before {
+    bottom: -100px;
+    height: 106%;
+  }
+  .seminer__date {
+    font-size: 15px !important;
+    letter-spacing: 1.2px;
+    list-style: 1.2rem;
+    font-weight: bolder;
+  }
+  .seminer__li:nth-of-type(1) {
+    margin-right: 20px;
+  }
+  .seminer__more.content-width, .seminer__more.interview, .seminer__more.search__container {
+    widows: 60%;
+  }
+  .strong__inner {
+    max-width: 95% !important;
+    margin: -200px auto 0;
+    padding: 40px 30px 40px;
+  }
+  .reason__articles li::before {
+    content: "";
+    height: 112%;
+  }
+  .reason__btn {
+    width: 70%;
+    margin: auto;
+    margin-top: -100px;
+  }
+  .reason__imagefram {
+    display: block;
+  }
+  .reason__imagefram-mobile {
+    display: none;
+  }
+  .reason__li {
+    padding: 0 5%;
+    padding-bottom: 80px !important;
+  }
+  .reason__li:nth-of-type(2) {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    z-index: -1;
+  }
+  .reason__ttl {
+    font-size: 16px !important;
+  }
+  .top__hero img {
+    -o-object-position: 50% 15px;
+       object-position: 50% 15px;
+    /* max-height: 46%; */
+    width: 100vw;
+    height: 65vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (min-width: 960px) {
+  .font-sm, .case__price, .footer__dd, .footer__dt, .footer__li > a, .sentence, .seminer__price {
+    font-size: 16px !important;
+  }
+  .font-md, .btn-ttl, .case__article, .cta__feature-ttl {
+    font-size: 19px !important;
+  }
+  .font-lr, .main_ttl, .cta__sns__ttl, .industry__top__p {
+    font-size: 23px !important;
+  }
+  .font-lg, .part-main-ttl, .cta__mail-btn, .case__ribonn-price, .section_ttl {
     font-size: 36px !important;
   }
   .mb-10 {

@@ -3,9 +3,9 @@ body {
   font-family: noto,'Noto Sans', "ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,"ＭＳ Ｐゴシック",MS PGothic,"Font Awesome 5 Free",sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 a {
   text-decoration: none;
@@ -22,11 +22,14 @@ a {
 .font-md {
   font-size: 14px !important;
 }
-.font-lr {
+.font-mlr {
   font-size: 16px !important;
 }
+.font-lr {
+  font-size: 18px !important;
+}
 .font-lg {
-  font-size: 25px !important;
+  font-size: 22px !important;
 }
 
 .mb-10vw {
@@ -90,7 +93,7 @@ a {
 }
 .btn-ttl {
   font-weight: bold;
-  font-size: 14px;
+  @extend .font-md;
   text-align: center;
 }
 .content-width {
@@ -100,7 +103,7 @@ a {
 }
 .main {
   &_ttl {
-    font-size: 18px;
+    @extend .font-lr;
     color: $c_bg;
   }
 }
@@ -112,7 +115,7 @@ a {
 .part-main-ttl {
 
   font-family: 游ゴシック,游ゴシック体,Yu Gothic,YuGothic,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic ProN,メイリオ,Meiryo,sans-serif;
-  font-size: 22px;
+  @extend .font-lg;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -123,7 +126,7 @@ a {
 }
 
 .ttl-bk16 {
-  font-size: 16px;
+  @extend .font-mlr;
   color: #333;
   margin-bottom: 20px;
 }
@@ -138,7 +141,7 @@ a {
     box-shadow: 0 2px 4px rgba(0,0,0,.1)
   }
   &__predi {
-    font-size: 18px;
+    @extend .font-mlr;
     color: $c_bg;
     &-comment {
       margin-bottom: 8px;
@@ -160,7 +163,7 @@ a {
   &__article {
     color: #333;
     font-family: $font_m;
-    font-size: 14px;
+    @extend .font-md;
     line-height: 1.7;
     letter-spacing: 1.2px;
   }
@@ -187,7 +190,7 @@ a {
     margin-bottom: 15px !important;
     & > h2 {
       width: 100%;
-      font-size: 16px;
+      @extend .font-mlr;
       margin-bottom: 15px;
     }
   }
@@ -243,7 +246,7 @@ a {
       font-weight: bolder;
     }
     &-price {
-      font-size: 1.5rem;
+      @extend .font-lg;
       font-family: Lato;
       font-weight: 700;
     }
@@ -277,7 +280,7 @@ a {
    text-align: center;
   }
   &__ttl {
-    font-size: 18px;
+    @extend .font-mlr;
     color: $c_bg;
     letter-spacing: 1.5px;
     line-height: 1.5;
@@ -327,7 +330,7 @@ a {
       }
     }
     &-ttl {
-      font-size: 14px;
+      @extend .font-md;
       letter-spacing: 0.8px;
     }
   }
@@ -341,7 +344,7 @@ a {
     border: 2px solid #f2de9e;
     border-radius: 4px;
     color: #f2ee9e;
-    font-size: 16px!important;
+    @extend .font-mlr;
     font-weight: 700;
     padding: 15px 0;
   }
@@ -364,7 +367,7 @@ a {
       vertical-align: bottom;
     }
     &__ttl {
-      font-size: 18px;
+      @extend .font-lr;
       padding: 30px 0 20px;
     }
   }
@@ -390,19 +393,19 @@ a {
   &__dd {
     line-height: 20px;
     font-family: $font-m;
-    font-size: 0.8rem;
+    @extend .font-sm;
   }
   &__dt {
     padding-bottom: 20px;
     font-family: $font-m;
-    font-size: 0.8rem;
+    @extend .font-sm;
     font-weight: 700;
   }
   &__li {
     padding-bottom: 20px;
     & > a {
       font-family: $font-m;
-      font-size: 0.8rem;
+      @extend .font-sm;
     }
   }
   &__logo {
@@ -638,6 +641,9 @@ $pattern: (
   &_bain {
     border: 1px solid #ccc;
   }
+  &__img {
+    max-width: 200px;
+  }
 }
 
 .pc__nav {
@@ -675,6 +681,9 @@ $pattern: (
     left: 0;
     z-index: -1;
   }
+  &__imagefram {
+    display: none;
+  }
   &__No {
     @extend .reason__sub__ttl;
     font-size: 60px;
@@ -694,14 +703,14 @@ $pattern: (
   }
 }
 .section_ttl {
-  font-size: 22px;
+  @extend .font-lg;
   line-height: 1.4545;
   letter-spacing: 1.3px;
 }
 .sentence {
   line-height: 1.77;
   font-weight: 700;
-  font-size: 13px;
+  @extend .font-sm;
   letter-spacing: 1.1px;
   text-align: justify;
   text-align-last: center;
