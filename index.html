@@ -19,8 +19,33 @@
     <div class="container">
       <div class="nav-trigger"></div>
       <header class="header">
+        <div class="header__img__area">
+          <a href="">IMAGE</a>
+        </div>
+        <nav class="header__nav">
+          <div class="header__nav__head-sub">
+            <ul class="header__nav__ul">
+              <li><a href="#">求人検索</a></li>
+              <li><a href="#">取引先企業一覧</a></li>
+              <li><a href="#">コンサルタント紹介</a></li>
+              <li><a href="#">会社情報</a></li>
+              <li><a href="#">人材をお探しの企業様</a></li>
+            </ul>
+          </div>
+          <div class="header__nav__head-main">
+            <ul class="header__nav__ul">
+              <li><a href="#">コンサル転職</a></li>
+              <li><a href="#">PE転職</a></li>
+              <li><a href="#">事業会社転職</a></li>
+              <li><a href="#">インタビュー</a></li>
+              <li><a href="#">転職事例</a></li>
+              <li><a href="#">セミナー・相談会</a></li>
+            </ul>
+          </div>
+        </nav>
+
         <div class="header__inner grid">
-          <div class="logo col-7-middle">
+          <div class="logo col_xs-7-middle">
             <img class="logo__img" src="./assets/images/logo.png" alt="">
           </div>
           <nav class="pc__nav">
@@ -82,7 +107,11 @@
       <div id="Content" class="content">
         <!-- <div class="top mb-md"> -->
         <div class="top__hero">
-          <img src="./assets/images/img_top_mainvisual_sp.jpg" alt="">
+          <picture>
+            <source class="top__hero__pc" media="(min-width: 960px)" srcset="./assets/images/img_top_mainvisual.png">
+            <img class="kv_txt" src="./assets/images/img_top_mainvisual_sp.jpg">
+          </picture>        
+          <!-- <img src="./assets/images/img_top_mainvisual_sp.jpg" alt=""> -->
         </div><!-- hero-->
         <section id="Strong" class="strong">
           <div class="strong__container grid">
@@ -615,7 +644,7 @@
                     </li>
                     <li class="cta__feature col_xs-12 grid">
                       <div class="cta__feature-img col-12_xs-4-middle">
-                        <img src="./assets/images/chair.svg" alt="">
+                        <img style="transform: scale(0.85);" src="./assets/images/chair.svg" alt="">
                       </div>
                       <div class="cta__feature-text col-12_xs-8">
                         <h2 class="cta__feature-ttl mb-sm">転職決定者の70%以上が年収1,000万円以上を獲得
@@ -637,7 +666,7 @@
             <a class="cta__mail-btn" href="#">メールマガジン登録（無料）<i class="fas fa-angle-right fa-lg"></i></a>
             </div>
           </div>
-          <div class="cta__sns grid-spaceAround pb-md">
+          <div class="cta__sns grid-spaceAround">
             <p class="cta__sns__ttl col-5_xs-12">SNSでも有益な情報を発信しています</p>
             <div class="cta__sns-i cta__facebook col-3_xs-middle"><img class="cta__sns-icon" src="./assets/images/img_cta_sns_fb.svg" alt="">Facebook</div>
             <div class="cta__sns-i cta__linked col-3_xs-middle"><img class="cta__sns-icon" src="./assets/images/img_cta_sns_li.svg" alt="">Linked in</div>

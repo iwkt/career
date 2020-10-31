@@ -1021,6 +1021,10 @@ a {
   letter-spacing: 1.3px;
 }
 
+.section__br-pc {
+  display: none;
+}
+
 .sentence {
   line-height: 1.77;
   font-weight: 700;
@@ -1394,6 +1398,12 @@ a {
     width: 80%;
     margin: 0 auto;
     max-width: 1400px;
+  }
+  .mbl__nav {
+    display: none;
+  }
+  .pc__nav {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

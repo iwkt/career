@@ -29,3 +29,10 @@
   max-width: $contentMaxWidth;
 }
 
+.mbl__nav {
+  display: none;
+}
+
+.pc__nav {
+  display: block;
+}
