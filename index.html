@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAREER</title>
-  <link rel="stylesheet" href="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.scrollIntoView">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link rel="stylesheet" href="./assets/css/reset_style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/vendors/swiper/swiper.css">
   <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.scrollIntoView">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -19,40 +19,36 @@
     <div class="container">
       <div class="nav-trigger"></div>
       <header class="header">
-        <div class="header__img__area">
-          <a href="">IMAGE</a>
-        </div>
-        <nav class="header__nav">
-          <div class="header__nav__head-sub">
-            <ul class="header__nav__ul">
-              <li><a href="#">求人検索</a></li>
-              <li><a href="#">取引先企業一覧</a></li>
-              <li><a href="#">コンサルタント紹介</a></li>
-              <li><a href="#">会社情報</a></li>
-              <li><a href="#">人材をお探しの企業様</a></li>
-            </ul>
-          </div>
-          <div class="header__nav__head-main">
-            <ul class="header__nav__ul">
-              <li><a href="#">コンサル転職</a></li>
-              <li><a href="#">PE転職</a></li>
-              <li><a href="#">事業会社転職</a></li>
-              <li><a href="#">インタビュー</a></li>
-              <li><a href="#">転職事例</a></li>
-              <li><a href="#">セミナー・相談会</a></li>
-            </ul>
-          </div>
-        </nav>
+        <!-- <div class="header__img__area">
+          <a href=""><img src="./assets/images/logo_bain-thumb-452x452-3172.jpg" alt=""></a>
+        </div> -->
 
         <div class="header__inner grid">
-          <div class="logo col_xs-7-middle">
+          <div class="logo col-middle_xs-7-middle">
             <img class="logo__img" src="./assets/images/logo.png" alt="">
           </div>
-          <nav class="pc__nav">
-            <!-- <div class="pc__nav__logo col-5-middle"><img src="./assets/images/logo.png" alt=""></div> -->
-            <ul class="pc__nav__ul">
-              <li class="pc__nav__li"><a href="#">KESCOの強み</a></li>
-              <li class="pc__nav__li hvr">
+          <nav class="pc__nav col-middle grid-right">
+            <div class="pc__nav__header-sub grid-right">
+              <ul class="pc__nav__ul">
+                <li class="pc__nav__li"><a href="#">求人検索</a></li>
+                <li class="pc__nav__li"><a href="#">取引先企業一覧</a></li>
+                <li class="pc__nav__li"><a href="#">コンサルタント紹介</a></li>
+                <li class="pc__nav__li"><a href="#">会社情報</a></li>
+                <li class="pc__nav__li"><a href="#">人材をお探しの企業様</a></li>
+              </ul>
+            </div>
+            <div class="pc__nav__header-main grid-right">
+              <ul class="pc__nav__ul">
+                <li class="pc__nav__li"><a href="#">コンサル転職</a><span>▼</span></li>
+                <li class="pc__nav__li"><a href="#">PE転職</a><span>▼</span></li>
+                <li class="pc__nav__li"><a href="#">事業会社転職</a><span>▼</span></li>
+                <li class="pc__nav__li"><a href="#">インタビュー</a><span>▼</span></li>
+                <li class="pc__nav__li"><a href="#">転職事例</a><span>▼</span></li>
+                <li class="pc__nav__li"><a href="#">セミナー・相談会</a><span>▼</span></li>
+              </ul>
+            </div>
+            
+              <!-- <li class="pc__nav__li hvr">
                 <a href="#">事業内容 ▼</a>
                 <div class="hover__window serv_contents grid-center">
                   <ul class="hover__items col-11">
@@ -91,8 +87,12 @@
                   </a>
                 </div>
               </li>
-            </ul>
+              </ul> 
+            </div> -->
           </nav>
+          <div class="pc__nav__header__regstory col-middle sm-hidden grid-right">
+            <img src="./assets/images/registory.png" alt="">
+          </div>
           <!-- hamburger menu ここから-->
           <div class="mbl__nav">
             <a id="navOpen" class="nav_open">

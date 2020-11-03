@@ -1399,11 +1399,41 @@ a {
     margin: 0 auto;
     max-width: 1400px;
   }
+  .header {
+    height: 100px;
+  }
+  .header__inner {
+    margin-top: 10px !important;
+  }
   .mbl__nav {
     display: none;
   }
   .pc__nav {
     display: block;
+  }
+  .pc__nav__header-main {
+    font-size: 1.0rem;
+  }
+  .pc__nav__header-sub {
+    font-size: 0.9rem;
+    margin-bottom: 10px !important;
+  }
+  .pc__nav__header__regstory {
+    margin-right: 20px !important;
+  }
+  .pc__nav__header__regstory > img {
+    height: 70px;
+  }
+  .pc__nav__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .pc__nav__ul > li + li {
+    margin-left: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

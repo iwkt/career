@@ -29,10 +29,36 @@
   max-width: $contentMaxWidth;
 }
 
+.header {
+  height: 100px;
+  &__inner {
+    margin-top: 10px!important;
+  }
+}
 .mbl__nav {
   display: none;
 }
 
 .pc__nav {
   display: block;
+  &__header-main {
+    font-size: 1.0rem;
+  }
+  &__header-sub {
+    font-size: 0.9rem;
+    margin-bottom: 10px!important;
+  }
+  &__header__regstory {
+    margin-right: 20px!important;
+    & > img {
+      height: 70px;
+    }
+  }
+  &__ul {
+    display: flex;
+    justify-content: end;
+    & > li+li {
+      margin-left: 40px;
+    }
+  }
 }
